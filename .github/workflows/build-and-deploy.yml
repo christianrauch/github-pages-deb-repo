@@ -25,7 +25,7 @@ jobs:
           cp packages/*/*/* incoming/
           wget --directory-prefix=incoming/ https://github.com/qt-creator/qt-creator/releases/download/v19.0.1/qtcreator-linux-x64-19.0.1.deb
 
-          reprepro includedeb noble incoming/qtcreator-linux-x64-19.0.1.deb
+          reprepro includedeb bionic incoming/qtcreator-linux-x64-19.0.1.deb
 
           reprepro -V processincoming default
           reprepro -V export
