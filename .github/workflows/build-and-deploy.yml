@@ -18,8 +18,8 @@ jobs:
           pip3 install mako
 
           # import keys
-          gpg2 --import deploy/pub.gpg
-          echo -e "${{ secrets.GPG_PRIVATE_KEY }}" | gpg2 --import
+          # gpg2 --import deploy/pub.gpg
+          # echo -e "${{ secrets.GPG_PRIVATE_KEY }}" | gpg2 --import
 
           mkdir incoming
           cp packages/*/*/* incoming/
