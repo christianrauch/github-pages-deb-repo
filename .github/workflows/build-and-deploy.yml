@@ -1,5 +1,5 @@
 name: Build and Deploy
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
           # import keys
           gpg2 --import deploy/pub.gpg
           echo -e "${{ secrets.GPG_PRIVATE_KEY }}" | gpg2 --import
-          
+
           mkdir incoming
           cp packages/*/*/* incoming/
 
